@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious Button</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Curious Button</h1>
+
+    <button id="curiousButton" onclick="changeText()">Click Me!</button>
+
+    <script>
+        function changeText() {
+            var button = document.getElementById("curiousButton");
+            var currentText = button.innerText;
+
+            // Curious text variations
+            var curiousTexts = [
+                "What will happen?",
+                "Surprise!",
+                "Click again!",
+                "Curiouser and curiouser...",
+                "Expect the unexpected!",
+            ];
+
+            // Randomly select a curious text
+            var newText = curiousTexts[Math.floor(Math.random() * curiousTexts.length)];
+
+            // Change the button text
+            button.innerText = newText;
+        }
+    </script>
+
+</body>
+</html>
